@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: dashboard-collector
+  data:
+    mongodb:
+      uri: mongodb://localhost/dashboard_collector
+
+scheduler:
+  cron: 0 0/1 * * * *
+  enable: true
+
+sonarqube:
+  url: "http://10.120.100.231:9000"
+  token : "admin"
+  username : "admin"
+
+server :
+  port: 8087
+logging:
+  level:
+    com.cognizant.dashboard.collectors.sonarqube.clients.SonarClient: OFF
+
+  pattern:
+    console: '%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n'
