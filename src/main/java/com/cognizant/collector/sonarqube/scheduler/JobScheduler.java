@@ -16,7 +16,7 @@ import javax.annotation.PostConstruct;
  */
 @Component
 @Slf4j
-public class LeapJobScheduler {
+public class JobScheduler {
     @Autowired
     private ApplicationContext appContext;
     @Autowired
