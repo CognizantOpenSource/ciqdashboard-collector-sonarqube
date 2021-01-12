@@ -19,6 +19,7 @@ public class Constant {
     public static final String CREATED_AFTER ="createdAfter";
     public static final String ISSUES ="issues";
     public static final String FROM="from";
+    public static final String SOURCE = "source_sonar_";
 
 
 }

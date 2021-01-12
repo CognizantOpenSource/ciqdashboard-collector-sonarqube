@@ -8,6 +8,7 @@ import com.cognizant.collector.sonarqube.client.SonarClient;
 import com.cognizant.collector.sonarqube.service.SonarqubeIssueService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -24,6 +25,9 @@ import static com.cognizant.collector.sonarqube.constant.Constant.*;
 @Component
 @Slf4j
 public class SonarqubeIssueComponent {
+
+    public static String collectionName;
+    
     @Autowired
     SonarClient client;
 
@@ -136,5 +140,14 @@ public class SonarqubeIssueComponent {
     public String getCommaSeparatedKeys(String projectName) {
         List<String> keys = sonarqubeIssueService.getIssuesNotInClosedOrResolvedStatus(projectName);
         return keys.stream().collect(Collectors.joining(","));
+    }
+
+    @Value("${spring.data.mongodb.collection}")
+    public void setCollectionName(String collectionName) {
+        this.collectionName = SOURCE+collectionName;
+    }
+
+    public static String getCollectionName(){
+        return collectionName;
     }
 }
