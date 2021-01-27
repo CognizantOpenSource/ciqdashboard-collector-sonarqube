@@ -27,7 +27,7 @@ class SonarIssuesDetailsTest {
 //            String commaSeparatedKeys = issueComponent.getCommaSeparatedKeys(sonarProject.getProjectName());
 //            System.out.println(commaSeparatedKeys);
 //        });
-        Assertions.assertNotNull(issueComponent);
+        Assertions.assertNotNull(projects);
     }
 
     @Test
@@ -39,7 +39,7 @@ class SonarIssuesDetailsTest {
 //            System.out.println(dateToString);
 //
 //        });
-        Assertions.assertNotNull(issueComponent);
+        Assertions.assertNotNull(projects);
     }
 
     @Test
