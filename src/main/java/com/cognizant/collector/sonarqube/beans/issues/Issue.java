@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-@Document(collection = "source_sonarIssues")
+@Document(collection = "#{T(com.cognizant.collector.sonarqube.component.SonarqubeIssueComponent).getCollectionName()}")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "key",
