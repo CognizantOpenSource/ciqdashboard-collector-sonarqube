@@ -14,7 +14,7 @@ import java.util.TimeZone;
 
 @Component
 public class SonarqubeCommonUtility {
-    private final JacksonDecoder decoder = new JacksonDecoder();
+//    private final JacksonDecoder decoder = new JacksonDecoder();
     private final HttpHeaders headers = new HttpHeaders();
     @Autowired
     ConfigProperties properties;

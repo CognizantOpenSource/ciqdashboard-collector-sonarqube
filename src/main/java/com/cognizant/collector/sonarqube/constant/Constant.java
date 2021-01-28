@@ -10,16 +10,17 @@ public class Constant {
     public static final String REQ_PARAM_PS = "ps";
     public static final String REQ_PARAM_P = "p";
 
-    public static final String METRICS ="metrics";
-    public static final String COMPONENT="component";
+//    public static final String METRICS ="metrics";
+//    public static final String COMPONENT="component";
     public static final String PROJECT_KEYS ="projectKeys";
     public static final String ASC ="asc";
     public static final String SORT_S ="s";
     public static final String CREATION_DATE ="CREATION_DATE";
     public static final String CREATED_AFTER ="createdAfter";
     public static final String ISSUES ="issues";
-    public static final String FROM="from";
+//    public static final String FROM="from";
     public static final String SOURCE = "source_sonar_";
+
 
 
 }

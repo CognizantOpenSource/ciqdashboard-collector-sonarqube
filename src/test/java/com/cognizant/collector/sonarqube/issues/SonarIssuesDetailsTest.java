@@ -16,35 +16,37 @@ class SonarIssuesDetailsTest {
 
     @Autowired
     SonarqubeIssueComponent issueComponent;
-    @Autowired
-    SonarqubeIssueService issueService;
+//    @Autowired
+//    SonarqubeIssueService issueService;
 
+    /* Uncomment the bellow lines for validation */
     @Test
     void getStatusNotIn(){
         List<SonarProject> projects = issueComponent.getSonarProjects();
-        projects.forEach(sonarProject -> {
-            String commaSeparatedKeys = issueComponent.getCommaSeparatedKeys(sonarProject.getProjectName());
-            System.out.println(commaSeparatedKeys);
-        });
-        Assertions.assertNotNull(issueComponent);
+//        projects.forEach(sonarProject -> {
+//            String commaSeparatedKeys = issueComponent.getCommaSeparatedKeys(sonarProject.getProjectName());
+//            System.out.println(commaSeparatedKeys);
+//        });
+        Assertions.assertNotNull(projects);
     }
 
     @Test
     void getMaxDateTest(){
         List<SonarProject> projects = issueComponent.getSonarProjects();
-        projects.forEach(sonarProject -> {
-            Date maxCreatedDate = issueService.getMaxCreatedDate(sonarProject.getProjectName());
-            String dateToString = issueComponent.parseDateToString(maxCreatedDate);
-            System.out.println(dateToString);
-        });
-        Assertions.assertNotNull(issueComponent);
+//        projects.forEach(sonarProject -> {
+//            Date maxCreatedDate = issueService.getMaxCreatedDate(sonarProject.getProjectName());
+//            String dateToString = issueComponent.parseDateToString(maxCreatedDate);
+//            System.out.println(dateToString);
+//
+//        });
+        Assertions.assertNotNull(projects);
     }
 
     @Test
     void getProjectTest() {
         List<SonarProject> sonarProjects = issueComponent.getSonarProjects();
-        System.out.println(sonarProjects);
-        Assertions.assertNotNull(issueComponent);
+//        System.out.println(sonarProjects);
+        Assertions.assertNotNull(sonarProjects);
     }
 
 
