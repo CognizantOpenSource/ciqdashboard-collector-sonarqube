@@ -3,7 +3,7 @@ spring:
     name: dashboard-collector
   data:
     mongodb:
-      uri: mongodb://idashboard:${spring.data.mongodb.credents}@10.120.100.231/idashboard
+      uri: mongodb://ciqdashboard:${spring.data.mongodb.credents}@10.120.100.231/ciqdashboard
       credents: ENC(4litQ6Gs+nMxT88Dxa5hy8/peZ3m46Va/aeFy2vHw/PFqoBDhVseIETBNKgPnimJ)
       collection: Issues
 
